@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: system-ui;
+}
+
+
+header{
+    background-color: rgba(205, 196, 196, 0.2);
+    height: 150px;
+    padding-left: 10rem;
+    box-shadow: 1px 2px 0px 0px rgba(180, 176, 179, 0.4); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    
+}
+.p-header{
+    
+    border:1rem;
+
+}
+.headline h2{
+    text-transform: uppercase;
+    
+}
+
+.navbar{
+    color: white;
+    padding-left: 9rem;
+    
+}
+
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a {
+    text-decoration: none;
+    color: rgb(15, 10, 10);
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: rgba(97, 89, 14, 0.416);
+}
+.image{
+    height: 500px;
+    width:100%;
+}
+
+h2 {
+    line-height: 80px;
+    font-size: medium;
+}
+.logo{
+padding: 40px;
+     
+}
+.grid-item-2 p{
+    margin-bottom:1rem;
+
+}
+
+.grid-container{
+display: grid;
+grid-template-columns:1fr 2fr;
+
+}
+
+.grid-item{
+margin-top: 2rem;
+margin-right: 4rem;
+margin-left: 4rem;
+margin-bottom: 7rem;
+
+
+}
+
+.p-grid{
+    font-size: small;
+    color:gray;
+}
+
+
+
+
+h4 ~ p{
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+
+}
+
+
+footer{
+    background-color: blueviolet;
+    padding:70px 0;}
+
+
+iframe{
+    width: 200px;
+    height: 200px;
+}
+
+.container{
+    max-width: 1100px;
+    margin:auto;
+}
+ul{
+    list-style: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 20%;
+    padding:0 25px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+
+
+ li>a {
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+
+ }
+
+ .ul-footer>li {
+   
+    margin-bottom: 40px
+   
+}
+
+.footer-col ul li a:hover{
+    color:#0c0b0b;
+    padding-left: 8px;
+}
+
+@media(max-width:550px){
+    .footer-col{
+        width:60%;
+        margin-bottom: 30px;
+
+    }
+    .grid-container{
+        grid-template-columns: 1fr;      
+    }
+    .navbar-links ul {
+         flex-direction: column;
+         align-items: flex-start;
+    }
+    
+}
+
+
+
+
