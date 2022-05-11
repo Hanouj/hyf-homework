@@ -1,0 +1,298 @@
+
+body{
+    margin:0;
+    padding:0;
+    font-family: system-ui;
+    background-color: rgba(244, 85, 196, 0.2);
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header{
+    background-color:rgba(255, 16, 159, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 5px 10px;
+    box-shadow: 5px 5px 2px 5px rgba(106, 19, 84, 0.4); 
+}
+
+#logo{
+border-radius: 100%;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1em 3em; 
+  }
+  
+  nav a{
+    text-align: left;
+    text-decoration: none;
+    font-size: 17px;
+    color: black; 
+  }
+  
+  nav a:hover{
+    cursor: pointer;
+    color: rgb(148, 5, 5);
+  }
+
+
+.progress{
+  width:400px;
+  height:35px;
+  background-color: rgba(99, 30, 87, 0.137);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+}
+.progress__fill{
+  width:25%;
+  height: 100%;
+  background-color: rgba(65, 5, 45, 0.2);
+}
+
+.progress__two{
+  width:25%;
+  height: 100%;
+  background-color: rgba(65, 5, 45, 0.2);
+  animation: left-to-right 2s forwards cubic-bezier(0,0,0,0) ;
+}
+
+.progress__three{
+  width:40%;
+  height: 100%;
+  background-color: rgba(65, 5, 45, 0.2);
+  animation: straight 2s forwards cubic-bezier(0,0,0,0) ;
+
+}
+
+@keyframes left-to-right {
+  100%{
+    transform: translateX(100%);
+  }
+}
+@keyframes straight {
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+section{
+  margin-top: 15px;
+  padding:30px 40px;
+  width:60%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding:20px 10px 10px 40px;
+
+}
+
+.name, .info{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.last-name, .post-code, .phone {
+  margin-left: 15px;
+  width:100px;
+}
+
+
+
+label{
+  font-size: large;
+  width: 180px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.more-info{
+  font-size: larger;
+  width: 100px;
+  display: inline-block;
+}
+
+#country-id{
+  width:175px;
+  height: 8px;
+}
+
+input[type=text], select{
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  padding:8px;
+  box-sizing: border-box;
+}
+
+input[type=number], input[type=tel], input[type=email],  input[type=password]  {
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  padding:8px;
+  box-sizing: border-box;
+  margin: 18px 0;
+}
+
+
+input[type=checkbox]{
+  height:20px;
+  width: 30px;
+  margin: right 2px;
+}
+.checkbox-flex{
+display: flex;
+flex-direction: row; 
+}
+
+input[type=radio]{
+  height: 20px;
+  width:25px;
+  margin-right:100px;
+  border: 1px solid darkgray;
+  outline: none;
+  box-shadow: 0 0 5px 2px gray inset;
+}
+
+.radio-flex{
+  display: flex;
+  flex-direction:row ;
+}
+
+textarea{
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  width:700px;
+  height: 100px;
+  margin-top: 80px;
+}
+
+.country{
+  display: flex;
+  justify-content: row;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+.countries{
+  margin-left: 10px; 
+}
+.countries > option{
+background-color: rgb(101, 25, 86);
+color: azure;
+border: 2px solid #aaa;
+}
+
+.address-code{
+  display: flex;
+  flex-direction: row;
+}
+
+
+#em-profile{
+  font-size: 10px;
+}
+
+.shipping{
+  margin-top: 80px;
+  font-size: large;
+}
+.label-address{
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap:10px;
+  justify-content: space-around;
+  margin-right:100px;
+}
+
+.p-images{
+  margin-top: 60px;
+}
+
+.next-step{
+  border:1px solid rgb(120, 85, 104);
+  background:rgb(120, 85, 104);
+  padding: 15px 50px 15px 50px;
+    color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.next-step:hover{
+background: white;
+color:black;
+}
+.align-right{
+  text-align: right;
+  margin-right: 60px; 
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 667px){
+  
+  #wrapper{
+    flex-direction: column;
+    text-align: center;
+  }
+  header{
+   text-align: center;
+    font-size: 15px ;
+  }
+ 
+  nav{
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    text-align: center;
+  }
+  .progress{
+    width:200px;
+    }
+
+  section{
+    grid-template-columns: 1fr;
+    gap: 0px;
+    text-align: left;
+    padding:30px 5px;
+    width:100%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-column: auto;
+    align-items: center;
+  }
+
+    #logo{
+      border-radius: 10%;
+      }
+      
+      textarea{
+        width:300px;
+      }
+      
+}
