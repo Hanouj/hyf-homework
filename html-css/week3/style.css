@@ -118,12 +118,14 @@ form{
 }
 
 
-.last-name, .post-code, .phone, .first-name {
+.last-name, .post-code, .first-name {
   margin-left: 15px;
   width:100px;
 }
 
-
+.phone{
+  width:100px;
+}
 
 label{
   font-size: large;
