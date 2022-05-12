@@ -74,6 +74,12 @@ nav {
   animation: straight 2s forwards cubic-bezier(0,0,0,0) ;
 
 }
+.progress__four{
+  width:50%;
+  height: 100%;
+  background-color: rgba(65, 5, 45, 0.2);
+  animation: end 2s forwards cubic-bezier(0,0,0,0) 
+}
 
 @keyframes left-to-right {
   100%{
@@ -85,6 +91,13 @@ nav {
     transform: translateX(100%);
   }
 }
+@keyframes end{
+    100%{
+      transform: translateX(100%);
+    }
+  }
+
+
 
 section{
   margin-top: 15px;
@@ -99,13 +112,13 @@ form{
 
 }
 
-.name, .info{
+.name, .infom{
   display: flex;
   flex-direction: row;
 }
 
 
-.last-name, .post-code, .phone {
+.last-name, .post-code, .phone, .first-name {
   margin-left: 15px;
   width:100px;
 }
@@ -125,7 +138,7 @@ label{
   display: inline-block;
 }
 
-#country-id{
+#country-id, #card-id{
   width:175px;
   height: 8px;
 }
@@ -138,7 +151,7 @@ input[type=text], select{
   box-sizing: border-box;
 }
 
-input[type=number], input[type=tel], input[type=email],  input[type=password]  {
+input[type=number], input[type=tel], input[type=email],  input[type=password], input[type=date]  {
   border: 2px solid #aaa;
   border-radius: 4px;
   outline: none;
@@ -146,7 +159,14 @@ input[type=number], input[type=tel], input[type=email],  input[type=password]  {
   box-sizing: border-box;
   margin: 18px 0;
 }
-
+.type-number, .type-text{
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  padding:8px;
+  box-sizing: border-box;
+  margin: 18px 0;
+}
 
 input[type=checkbox]{
   height:20px;
@@ -181,15 +201,17 @@ textarea{
   height: 100px;
   margin-top: 80px;
 }
-
-.country{
+.ccv{
+  width:8%;
+}
+.country, .card-type{
   display: flex;
   justify-content: row;
   margin-top: 20px;
   font-size: large;
   font-weight: bold;
 }
-.countries{
+.countries, .cards-type{
   margin-left: 10px; 
 }
 .countries > option{
