@@ -7,7 +7,7 @@ function weatherTemperature(temperature){
     }else if(temperature>=16){
         return 'you should wear shirt and a t-shirt';
     }
-}
+};
 
 const clothesTowear = weatherTemperature(11); // output you should wear warm clothes with a light jacket
 console.log(clothesTowear);   
