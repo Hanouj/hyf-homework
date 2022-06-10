@@ -16,11 +16,8 @@ return boughtCandyPrices.push(0.5*weight);
 }
 
 addCandy('sweet',4);
-addCandy('chocolate',5);
+//addCandy('chocolate',5);
 addCandy('toffe',10);
-
-
-
 
 console.log(boughtCandyPrices);
 
@@ -30,17 +27,20 @@ const amountToSpend= Math.random() * 100;
 
 let totalPrice=0; 
 
-function canBuyMoreCandy(boughtCandyPrices, amountToSpend){
+function canBuyMoreCandy(totalPrice){
 
     for(let i=0; i<boughtCandyPrices.length; i++){
         totalPrice += boughtCandyPrices[i];
     }
-     if (totalPrice >= amountToSpend) {
+     if (totalPrice < amountToSpend) {
+        console.log(`You can still buy more with ${amountToSpend-totalPrice.toFixed(2)}, so please do!`);
+        return;
+        
+      } else {
         console.log("Enough candy for you!");
-      }else {
-        console.log(`You can buy more with ${amountToSpend-totalPrice}, so please do!`);
+        return;
       }
 
     }
 
-    canBuyMoreCandy(boughtCandyPrices, amountToSpend); 
+    canBuyMoreCandy(totalPrice); 
