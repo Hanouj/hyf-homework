@@ -9,10 +9,10 @@ const names = [
     "katrine",
     "Tala",
   ];
-  const nameToRemove = names.indexOf("Ahmad");
+  const findName = names.indexOf("Ahmad");
 
-  if(nameToRemove>-1){
-      names.splice(nameToRemove,1); //remove one item only
+  if(findName>-1){
+      names.splice(findName,1); //remove one item only
   };
   
   console.log(names); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
@@ -27,19 +27,15 @@ const names = [
   };
 
   function calculateTime(speed, km){
-const timeInMinutes =(km/speed)*60; // turn the num to minutes
-const hours = Math.floor(timeInMinutes/60); //gets the hours
-const rhours= Math.floor(hours);  // should give us the hours
-const minutes =Math.floor(hours-rhours)*60; //takes the decimal part and multiplate it by 60
-const rminutes= Math.floor(minutes); // should give us the minutes
-console.log (`${rhours} hours and ${rminutes} minutes`);
-return;
-    
+const hours =(km/speed); // the hours in decimal number
+const onlyHours= Math.floor(hours); //gets only the hours
+console.log(onlyHours); // for checking 
+const minutes =(hours-onlyHours)*60; //takes the decimal part and convert it to minutes
+return (`${onlyHours} hours and ${minutes.toFixed(0)} minutes`);
+
     };  
-
-
-calculateTime(travelInformation.destinationDistance, travelInformation.speed);
- //not sure why the output is always 0 I tried many ways to solve it..
+console.log(calculateTime(travelInformation.speed, travelInformation.destinationDistance)); // output 8 h and 38 min
+ 
   
 
 
@@ -70,11 +66,13 @@ function logOutSeriesText() {
 
   for (let serie of seriesDurations){
     const convertToMinutes= serie.days*1440 + serie.hours*60 + serie.minutes;
-    const averageYears = 80*525600; // years to minutes
-   totalSeriesDurations += convertToMinutes/averageYears *100 ;  // for each serie duration time Im adding it to total
+    const yearsToMinutes = 80*525600; // years to minutes
+   totalSeriesDurations = convertToMinutes/yearsToMinutes *100 ;  // for each serie duration time Im adding it to total
    console.log(`${serie.title} took ${totalSeriesDurations.toFixed(3)} % of my life`);
+  
   }
-  const totalAverage=totalSeriesDurations/ seriesDurations.length;
+ 
+  const totalAverage = totalSeriesDurations/ seriesDurations.length;
   console.log(`In total that is ${totalAverage.toFixed(2)} % of my life`);
 }
 logOutSeriesText(); 
@@ -102,14 +100,16 @@ console.log(notes);
 //Get a note
 
 function getNote(id){
+  if (typeof id !=="number" || typeof id === null || id>notes.length) {
+    return (`error use number only`);
+    
+  } else{
   for (let i = 0; i <= notes.length; i++){
 if (id == notes[i].id)  {
  return (notes[i]);
  
-}else if (typeof id !=="number" || typeof id === null){
-  return (`error use number only`);
-  
-};
+}
+}
 };
 };
 
@@ -120,13 +120,14 @@ console.log("note of this id is : ", firstNote);
 
 
 function logOutNotesFormatted(){
-  for (let i = 0; i <= notes.length; i++){
-    console.log("the note with id: "+ notes[i].id + " has the following note: " + notes[i].content);
-    return 
+  for (let i = 0; i < notes.length; i++){
+    noteFormat=console.log ("the note with id: "+ notes[i].id + " has the following note: " + notes[i].content);
+    
   };
+  return noteFormat
 };
 
-logOutNotesFormatted(); //In output Im only getting the first note, what can I do here to get all the notes that I have
+logOutNotesFormatted(); 
 
 
 ////Unique feature
@@ -139,12 +140,12 @@ function addActivity(date, activity, duration){
   if (typeof date==="string" && 
   typeof activity==="string" && 
   typeof duration ==="number"){
-  const objList={
+  const activitiesList={
     date:date,
     activity:activity,
     duration:duration,
   };
-  activities.push(objList);
+  activities.push(activitiesList);
   return activities;
 
   }else
@@ -179,5 +180,5 @@ function showStatus(){
 };
 
 
-showStatus();  // my output is you have added 3 activities. They amount to 90 mn of usage
+showStatus();  //output is you have added 3 activities. They amount to 90 mn of usage
 
