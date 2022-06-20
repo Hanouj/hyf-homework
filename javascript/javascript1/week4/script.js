@@ -4,8 +4,8 @@ let userName= "";
 const todolist=[];
 
 function getReply(command){
-if (command==="Hello my name is Benjamin" && userName==null){
-    return `You are not a person`
+if (command==="" && userName.length!==0){
+    return "Please say your name"
 }
     if (command ==="Hello my name is Benjamin" && userName===""){
         userName="Benjamin";
@@ -13,9 +13,10 @@ if (command==="Hello my name is Benjamin" && userName==null){
 
     } if(command ==="Hello my name is Benjamin" && userName!=""){
         userName="";
-        return`This name was already mentioned`;
+        return "This name was already mentioned";
  
-    } if (command==="what is my name?"){
+    } if (command==="What is my name?"){
+        userName="Hanna";
     return`Your name is ${userName}`;
 
 }if (command ==="what is my name?" && userName.length===0){
@@ -62,27 +63,20 @@ switch (splitText[3]) {
 
 
         }
-        if (command.includes("Set a timer for 4 minutes")) {
-            const millisecondsFor4Minutes = 1000 * 60 * 4;
-            let timer = setTimeout (timerFunction, millisecondsFor4Minutes);
-            return `Time is set for ${timer} minutes`;
-            function timerFunction() {
-            alert (`timer done`);
+        if (command === "Set a timer for 4 minutes") {
+            const millisecondsFor4Minutes = 1000 * 60 * 4; // it is always 4 minutes in this case
+            setTimeout (alert("timer done"), millisecondsFor4Minutes);
+            return "The timer is set for 4 minutes";
+        }
 
-            }
+}
 
-          
-
-};
-
-};
-
-
+return "Not the right command"
 };
 
 console.log(getReply("Hello my name is Benjamin")); //output Nice to meet you Benjamin
 console.log(getReply("Hello my name is Benjamin")); //output This name was already mentioned
-console.log(getReply("What is my name?")); // output is undefined not sure why!
+console.log(getReply("What is my name?")); // output your name is Hanna
 console.log(getReply("Add fishing to my todo"));// output Fishing has been added to your todo list
 console.log(getReply("Add singing in the shower to my todo")) // output Singing has been added to your todo list
 console.log(getReply("Remove fishing from my todo")) // output Removed fishing from your todo
@@ -91,7 +85,7 @@ console.log(getReply("What day is it today")); // output Today is 16 June 2022
 console.log(getReply("what is 3 + 3")); //output The result is 6 
 console.log(getReply("what is 8 * 3")); // output The result is 24
 console.log(getReply("what is 50 / 4")); // output The result is 12.5
-console.log(getReply("Set a timer for 4 minutes")); //output undifined not sure why
+console.log(getReply("Set a timer for 4 minutes")); //output Not the right command
 
 
 
