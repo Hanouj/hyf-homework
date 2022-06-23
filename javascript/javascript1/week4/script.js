@@ -47,7 +47,7 @@ if (command==="" && userName.length!==0){
     const splitText = command.split(` `); // used to convert a string to an array 
     const num1=parseFloat(splitText[2]); // convert it to a string if needed and returns a floating point number
     const num2=parseFloat(splitText[4]);
-    const result ="The result is: ";
+    const result ="The result is: "
 
 switch (splitText[3]) {
             case '+': return(result + (num1 + num2));
@@ -63,13 +63,14 @@ switch (splitText[3]) {
 
 
         }
+        }
         if (command === "Set a timer for 4 minutes") {
             const millisecondsFor4Minutes = 1000 * 60 * 4; // it is always 4 minutes in this case
             setTimeout (alert("timer done"), millisecondsFor4Minutes);
-            return "The timer is set for 4 minutes";
+            return "The timer is set for 4 minutes"
         }
 
-}
+
 
 return "Not the right command"
 };
@@ -85,7 +86,7 @@ console.log(getReply("What day is it today")); // output Today is 16 June 2022
 console.log(getReply("what is 3 + 3")); //output The result is 6 
 console.log(getReply("what is 8 * 3")); // output The result is 24
 console.log(getReply("what is 50 / 4")); // output The result is 12.5
-console.log(getReply("Set a timer for 4 minutes")); //output Not the right command
+console.log(getReply("Set a timer for 4 minutes")); //output The timer is set for 4 minutes
 
 
 
