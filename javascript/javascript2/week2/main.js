@@ -107,10 +107,7 @@ const inputForSearch = document.querySelector("#search-item");
 inputForSearch.addEventListener("keyup", search);
 
 function search() {
-  const searchInput = document.querySelector("#search-item");
-
-  const searchTerm = searchInput.value;
-  console.log(searchTerm);
+  const searchTerm = inputForSearch.value;
 
   const searchResult = [];
 
@@ -128,29 +125,24 @@ function search() {
     const notFound = document.createElement("p");
     notFound.textContent = "Item not Found !";
     notFound.classList.add("not-found");
-      productList.appendChild(notFound);
+    productList.appendChild(notFound);
   }
 }
 
-
-const inputForMaxPrice =document.querySelector("#max-price");
+const inputForMaxPrice = document.querySelector("#max-price");
 
 inputForMaxPrice.addEventListener("keyup", setTheMaxPrice);
 
-function setTheMaxPrice (){
-  const maximumPrice= document.querySelector("#max-price");
-  const maximumValue = maximumPrice.value;
-  const maximumPriceResult =[];
-  console.log(maximumValue);
+function setTheMaxPrice() {
+  const maximumValue = inputForMaxPrice.value;
+  const maximumPriceResult = [];
 
   for (let i = 0; i < products.length; i++) {
     const price = products[i].price;
 
-   if (price < maximumValue) {
+    if (price < maximumValue) {
       maximumPriceResult.push(products[i]);
     }
-   }
+  }
   renderProducts(maximumPriceResult);
-
-}; 
-
+}
