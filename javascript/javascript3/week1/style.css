@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #222;
+    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+   
+}
+#gif-title{
+color: rgb(161, 80, 80);
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-top:30px;
+}
+#weather-title{
+    color:rgb(13, 73, 65);
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top:30px;
+    font-family: 'Anton', sans-serif;
+}
+
+#Giphy-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    flex-direction: column;
+
+}
+.input-wrapper{
+    width: 250px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,1);
+    height: 40px;
+    position: relative;
+    margin: 20px;
+}
+
+.search{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid tan;
+    font-size:17px ;
+    padding: 5px 3px;
+
+}
+
+.search:focus ~ .gif-label,
+.search:valid ~ .gif-label{
+    transform: translateY(-25px);
+    font-size: 10px;
+    color:tan;
+}
+
+.gif-label{
+    bottom: 20px;
+    padding-left: 20px;
+    position:absolute ;
+    left:0;
+    color:grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.btn-num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.btnSearch, .num{
+padding: 10px 30px;
+font-size: 1rem;
+position: relative;
+margin: 15px;
+}
+.btnSearch{
+    background:rgb(208, 113, 113);
+    color: white;
+    border-radius: 30px;
+    transition:transform 0.3s ease;
+}
+.btnSearch::after, .btnSearch::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: rgb(208, 113, 113);
+border-radius: inherit;
+width:100%;
+height: 100%;
+left:0;
+bottom: 0;
+z-index:-1 ;
+transition: transform 0.3s ease;
+}
+.btnSearch:hover{
+    transform: translate(-12px, -12px );
+}
+.btnSearch:hover::after{
+    transform: translate(6px, 6px );
+}
+.btnSearch:hover::before{
+    transform: translate(12px, 12px );
+}
+.num{
+    border:none;
+    box-shadow: 1px 2px 2px rgba(0, 0,0,1);
+    width:170px;
+border-radius: 10px;
+outline: none;
+
+
+}
+
+.weather-wrapper{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    background: #000000d0;
+    color:white;
+    border-radius:100px ;
+    margin:20px;
+   
+    
+    
+}
+
+.search-weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+    margin:0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+#btn:hover{
+background: #7c7c7c;
+}
+
+#city-input{
+    border: none;
+    outline: none;
+    padding: 0.6em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+   
+}
+h1.temp{
+    margin:0;
+    margin-bottom: 0.2em;
+}
+
+#error-p, #error-m{
+    color:red;
+    text-decoration: underline;
+}
+.description{
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+
+}
+
+.weather.loading:after{
+    visibility: visible;
+    content: "check here for Danmarks weather";
+    color: white;
+    position: absolute;
+    top:0;
+    left:20px;
+}
+
+.out-img{
+
+display: grid;
+grid-template-columns: 0fr 0fr;
+justify-content: center;
+align-content: center;
+gap: 6px;
+
+}
+
