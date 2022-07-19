@@ -1,0 +1,29 @@
+{
+    "pets":[
+        {
+            "name":"Daisy",
+            "species":"cat",
+            "favFood":["dry food", "chips", "wet food","any food"],
+            "birthYear":2019
+        },
+        {
+            "name":"Tweety",
+            "species":"Chick",
+            "favFood":["bird food", "strawberries", "apples"],
+            "birthYear":2013
+
+        },
+        {
+            "name":"Bissou",
+            "species":"Turtle",
+            "favFood":["lettuce","squash","parsley", "greens"],
+            "birthYear":2010
+        },
+        {
+            "name": "Goldfish",
+            "species":"fish",
+            "favFood":["sludge worms", "water fleas","feeder fish"],
+            "birthYear":2002
+        }
+    ]
+}
