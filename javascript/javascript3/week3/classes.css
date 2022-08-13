@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border:1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+#products-price{
+color:darkblue;
+position:relative; 
+left:140px; 
+top:330px; 
+}
+#user-name{
+position:relative; 
+left:-70px; 
+top:-10px;
+}
+
