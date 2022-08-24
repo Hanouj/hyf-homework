@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", fetchweather);
 
 function fetchweather() {
-  const weatherButton = document.getElementById("btn");
+  const weatherButton = document.getElementById("searchBtn");
   weatherButton.addEventListener("click", (ev) => {
     ev.preventDefault(); // to stop the page reload
 
@@ -14,7 +14,7 @@ function fetchweather() {
       .then((weather) => {
         if (inputCity.value == "" || !inputCity.value.length) {
           const errorp = document.getElementById("error-p");
-          errorp.innerText = "error type a city name first";
+          errorp.innerText = "Type a city name first";
           console.log("error type a city name first");
         } else {
           const cityName = weather.name;

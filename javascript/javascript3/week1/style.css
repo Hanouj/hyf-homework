@@ -25,7 +25,10 @@ color: rgb(161, 80, 80);
     margin-top:30px;
     font-family: 'Anton', sans-serif;
 }
-
+#location{
+    display: flex;
+    justify-content: center;
+}
 #Giphy-wrapper{
     display: flex;
     justify-content: center;
