@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,800;1,300;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Homework js3 week1</title>
+    
+</head>
+<body>
+    <h1 id="weather-title">Weather app</h1>
+    <section class="weather-wrapper">
+        <form class="search-weather">
+<input type="text" id="city-input" placeholder="city name" onclick="this.value=' '" >
+<button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>  
+</form>
+<p id="error-p"></p>
+<div class="weather loading">
+<h2 class="city">Weather in Roskilde</h2>
+<h1 class="temp">16°</h1>
+<div class="flex">
+<img src="https://openweathermap.org/img/wn/04d.png" alt="" class="icon"/>
+<div class="description">Cloudy</div>
+</div>
+<div class="humidity">Humidity: %</div>
+<div class="wind">Wind speed: 6.2 km/h</div>
+<div class="sunrise">Sunrise</div>
+<div class="sunset">Sunset</div>
+</div>  
+
+    </section>
+   
+    
+
+    
+    <script src="weather.js"></script>
+</body>
+</html>
