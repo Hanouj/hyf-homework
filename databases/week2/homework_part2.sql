@@ -5,7 +5,6 @@ TASK 1
 Class: with the columns: id, name, begins (date), ends (date)
 Student: with the columns: id, name, email, phone, class_id (foreign key)
 */
-drop table `class`;
 create table `class`(
 `id` int unsigned not null auto_increment primary key,
 `name`varchar(255) not null,
@@ -13,7 +12,7 @@ create table `class`(
 `ends` datetime not null,
 `status` ENUM ('not started','ongoing','finished')
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/* runing this gives me error bcz I changed the name value
+
 insert into class (id, name, begins, ends, status) values (1,'class13', '2019-01-15', '2022-12-12','ongoing');
 insert into class (id, name, begins, ends, status) values (2,'class11', '2017-04-15', '2022-10-12','ongoing');
 insert into class (id, name, begins, ends, status) values (3,'class12', '2018-01-20', '2020-10-20','finished');
@@ -25,7 +24,6 @@ insert into class (id, name, begins, ends, status) values (8,'class13', '2019-11
 insert into class (id, name, begins, ends, status) values (9,'class16', '2023-06-23', '2027-06-27','not started');
 insert into class (id, name, begins, ends, status) values (10,'class11', '2017-01-15', '2022-10-12','ongoing');
 insert into class (id, name, begins, ends, status) values (11,'class11', '2017-01-15', '2022-10-12','ongoing');
-*/
 
 create table `student`(
 `id` int unsigned not null auto_increment primary key,

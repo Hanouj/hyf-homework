@@ -12,7 +12,7 @@ select * from task;
 
 -- 3
 update task
-set title="Get icecream and some sunshine", description='take a friend with you', due_date='2018-01-03 10:00:00'
+set due_date='2018-01-03 10:00:00'
 where id=2;
 select * from task;
 -- 4 
