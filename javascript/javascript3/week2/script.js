@@ -12,8 +12,7 @@ fetch(
     console.log(badMovies);
     //2-Creat an array of bad movies since year 2000
     const twentyOneBadMovies = movies
-      .filter((movie) => movie.year >= 2000)
-      .filter((movie) => movie.rating <= 4)
+      .filter((movie) => movie.year >= 2000 && movie.rating <= 4)
       .map((movie) => movie.title);
     console.log(twentyOneBadMovies);
   });

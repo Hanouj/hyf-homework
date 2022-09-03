@@ -38,6 +38,6 @@ async function translateAllAtOnce() {
     moveElement(blueBox, blueBoxTarget),
     moveElement(greenBox, greenBoxTarget),
   ]).then(() => {
-    console.log("All boxes has been moved back to their fixed position!");
+    console.log("All boxes has been moved!");
   });
 }
