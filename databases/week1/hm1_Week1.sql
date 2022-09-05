@@ -47,7 +47,7 @@ SELECT count(title), s.name
 FROM task t
 JOIN status s
 ON s.id = t.status_id
-GROUP BY name
+GROUP BY s.name
 ORDER BY COUNT(title) DESC;
 
 
