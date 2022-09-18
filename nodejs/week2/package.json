@@ -1,0 +1,29 @@
+{
+  "name": "hyf-homework",
+  "version": "1.0.0",
+  "description": "Using the `hyf-homework` repo. In the terminal run `git status`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hanouj/hyf-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hanouj/hyf-homework/issues"
+  },
+  "homepage": "https://github.com/Hanouj/hyf-homework#readme",
+
+    "dependencies": {
+      "express": "^4.18.1"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.19"
+    }
+}
+
