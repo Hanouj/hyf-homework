@@ -21,18 +21,17 @@ export function TodoList() {
     return(
     <>
    
-        {todoList.map((item) => <TodoListItems descp={item.description} date={item.deadLineDate} key={item.id}/> )}
-  
+   {todoList.map((item) => <TodoListItems item={item} key={item.id}/> )}  
 
     </>
     )
 }
 
-function TodoListItems({descp, date}) {
+function TodoListItems({item}) {
     return(
         <>
-       <h3> {descp}</h3>
-       <p><i>{date}</i></p> 
+
+       <li>{item.description}, <i>{item.deadLineDate}</i></li>
         </>
     )
 
