@@ -1,0 +1,50 @@
+import React from "react";
+import { useState } from "react";
+import TodoHeader from "./components/TodoHeader";
+import TodoList from "./components/TodoList";
+import './TodoListStyle.css'
+
+const todoArray = [
+    {
+      id: 1,
+      description: "Get out of bed",
+    },
+    {
+      id: 2,
+      description: "Brush teeth",
+    },
+    {
+      id: 3,
+      description: "Eat breakfast",
+    },
+  ];
+
+
+
+
+function Main(){
+    const [todos, setTodos]=useState(todoArray)
+    const buttonClick =()=>{
+        const todoArrayLen =todos.length
+        const addTodoList=[
+            {
+              id: todoArrayLen +1,
+              description: `Random text ${todoArrayLen +1}`,
+            }          
+                  ];
+        const nextTodoList=todos.concat(addTodoList)
+        setTodos(nextTodoList)
+    }
+    return(
+        <div className="wrapper">
+              <TodoHeader />
+
+           <button className="btn-add" onClick={buttonClick}>Add todo</button>
+           
+           {todos.length<=0 && (<p>No Items!</p>)}
+                     <TodoList todos={todos} setTodos={setTodos} />
+                    
+        </div>
+    )
+}
+export default Main
