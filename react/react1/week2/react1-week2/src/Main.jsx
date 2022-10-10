@@ -9,15 +9,10 @@ import Timer from "./Timer";
 function Main(){
     const [todos, setTodos]=useState(todoArray)
     const buttonClick =()=>{
-        const addTodoItem=[
-            {
-              id: Date.now(),
-              description: `review Haile's PR` 
-                        }            
-                  ]
-                              
-        const nextTodoList=todos.concat(addTodoItem)
-        setTodos(nextTodoList)
+     setTodos([...todos, {
+          id: Date.now(),
+          description: 'review Haile',
+          }])   
     }
     return(
         <div className="wrapper">
