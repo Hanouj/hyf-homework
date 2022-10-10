@@ -1,7 +1,7 @@
 import TodoListRow from "./TodoListRow";
 const TodoList =({todos, setTodos}) =>{
    
-    const deleteItem= (id)=>{
+    const deleteTodoItem= (id)=>{
    const newTodoArr  = todos.filter((todoItem) => todoItem.id !== id);
    setTodos(newTodoArr)
 }
@@ -11,7 +11,7 @@ return(
 <ul>
     {todos.map((todo)=>{
         return(
-            <TodoListRow todo={todo.description} key={todo.id} id={todo.id} deleteItem={deleteItem}/>
+            <TodoListRow todo={todo.description} key={todo.id} id={todo.id} deleteItem={deleteTodoItem}/>
         )
     })}
 </ul>

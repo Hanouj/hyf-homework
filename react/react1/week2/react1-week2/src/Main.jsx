@@ -3,41 +3,26 @@ import { useState } from "react";
 import TodoHeader from "./components/TodoHeader";
 import TodoList from "./components/TodoList";
 import './TodoListStyle.css'
-
-const todoArray = [
-    {
-      id: 1,
-      description: "Get out of bed",
-    },
-    {
-      id: 2,
-      description: "Brush teeth",
-    },
-    {
-      id: 3,
-      description: "Eat breakfast",
-    },
-  ];
-
-
-
+import todoArray from "./data";
+import Timer from "./Timer";
 
 function Main(){
     const [todos, setTodos]=useState(todoArray)
     const buttonClick =()=>{
-        const todoArrayLen =todos.length
-        const addTodoList=[
+        const addTodoItem=[
             {
-              id: todoArrayLen +1,
-              description: `Random text ${todoArrayLen +1}`,
-            }          
-                  ];
-        const nextTodoList=todos.concat(addTodoList)
+              id: Date.now(),
+              description: `review Haile's PR` 
+                        }            
+                  ]
+                              
+        const nextTodoList=todos.concat(addTodoItem)
         setTodos(nextTodoList)
     }
     return(
         <div className="wrapper">
               <TodoHeader />
+              <Timer />
 
            <button className="btn-add" onClick={buttonClick}>Add todo</button>
            
