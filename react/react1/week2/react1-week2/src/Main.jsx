@@ -11,7 +11,7 @@ function Main(){
     const buttonClick =()=>{
      setTodos([...todos, {
           id: Date.now(),
-          description: 'review Haile',
+          description: `review Haile's PR`,
           }])   
     }
     return(
