@@ -10,7 +10,6 @@ const TodoListRow =(props)=>{
 
     const updateEditButton =() =>{
         if (editing === true ){
-            console.log(descriptionInputValue)
             props.updateDescription(id, descriptionInputValue)
         }
         setEditing((currentValue)=>!currentValue)
