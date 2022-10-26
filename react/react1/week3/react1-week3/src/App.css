@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  margin: 0;
+  background-color: rgb(250, 237, 232);
+}
+
+.wrapper {
+ margin: auto;
+  margin-top: 70px;
+  width: 50%;
+  height: 120px;
+}
+li {
+  margin-top: 10px;
+}
+header {
+  color: rgb(161, 80, 80);
+  font-family: "Pacifico", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 30px;
+}
+input[type=checkbox]{
+  height:15px;
+  width: 20px;
+}
+.second-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn-add {
+  background-color: #9f3333;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  margin: 0;
+  outline: none;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.btn-delete, .btn-edit {
+  background-color: #fbc2d0;
+  border-radius: 100px;
+  box-shadow: rgba(116, 57, 8, 0.2);
+  color: black;
+  cursor: pointer;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+}
+input{
+  background-color: #e6c8ca;
+  border-radius: 100px;
+  box-shadow: rgba(116, 57, 8, 0.2);
+  color: black;
+  cursor: pointer;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+}
+
+.border {
+  border :solid;
+  margin-top: 10px;
+  padding: 10px 5px;
+ }
