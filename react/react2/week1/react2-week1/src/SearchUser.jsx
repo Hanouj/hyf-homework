@@ -24,12 +24,11 @@ const fetchUsers = useCallback(() => {
       .then((data) => {
         if (data && data.items) {
           setUsers(data.items);
-          console.log(data.items);
         } else {
-          setError("Error Slow down!");
+          setError("");
         }
-        setIsLoading(false);
-      });
+        setIsLoading(false)
+      }).catch((error)=>setError(error))
   }, [query]);
   useEffect(() => {
     fetchUsers();

@@ -10,7 +10,7 @@ export const RenderUser = () =>{
     }=useContext(UserContext)
 
      const usersResult = users.map((user, index) => (
-        <div key={index}>
+        <div key={user.id}>
           {user.login}
           <img src={user.avatar_url} alt="GitHub user avatar" />
         </div>
