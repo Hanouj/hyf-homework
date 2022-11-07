@@ -5,3 +5,6 @@ Carrots
 Green peas
 Onion
 Tomato
+Beans
+Carrots
+Green peas
